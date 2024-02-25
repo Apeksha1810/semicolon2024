@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Mavericks Team</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Script to load Watson Assistant Chat -->
+    <script>
+        window.watsonAssistantChatOptions = {
+          integrationID: "46189207-7ed1-49ab-a9cc-3ab502967de1", // The ID of this integration.
+          region: "jp-tok", // The region your integration is hosted in.
+          serviceInstanceID: "0ba3398b-0210-4aa4-9dd1-8c819d7b7b2c", // The ID of your service instance.
+          onLoad: async (instance) => { await instance.render(); }
+        };
+        setTimeout(function(){
+          const t=document.createElement('script');
+          t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+          document.head.appendChild(t);
+        });
+      </script>
+    <style>
+       body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #4d94ff, #4d79ff, #7854b2);
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.4em; /* Adjusted font size for main content */
+        }
+
+        #logo {
+            width: 100%;
+            max-width: 150px;
+            height: auto;
+            display: block;
+            margin: 10px 10px 0 10px;
+        }
+
+        h1 {
+            font-size: 4em;
+            text-align: justify;
+            overflow: hidden;
+            white-space: nowrap;
+            margin: 2px;
+            border-right: 2px solid #fff;
+            animation: typing 4s steps(40) infinite;
+        }
+
+        .main p {
+            font-size: 0.8em;
+            text-align: justify;
+            margin-top: 15px;
+        }
+
+        #get-started-btn {
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.3); /* Glass effect */
+            color: #fff;
+            padding: 12px;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        #get-started-btn:hover {
+            background-color: rgba(255, 255, 255, 0.5); /* Glass effect on hover */
+        }
+
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes typing {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: 70%;
+            }
+        }
+
+        /* Media queries for responsive design */
+        @media screen and (max-width: 600px) {
+            main {
+                font-size: 1.2em; /* Adjusted font size for smaller screens */
+            }
+
+            #get-started-btn {
+                transform: skew(0); /* Reset skew for smaller screens */
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img id="logo" src="logo.png" alt="Mavericks Logo">
+    </header>
+
+    <main>
+        <h1>
+            Welcome !!!
+        </h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et eleifend purus. 
+            Proin sed tristique velit. Nullam efficitur libero vel justo laoreet, nec feugiat nisi convallis.
+        </p>
+        <div id="get-started-btn">Get Started</div>
+    </main>
+</body>
+</html>
